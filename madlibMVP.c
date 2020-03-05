@@ -5,7 +5,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define LONGEST_WORD = 50
+
 char exampleMad[] = "The adjective NINJA said adverb to the adjective students to verb their homework.";
+
+char array1[9][LONGEST_WORD] = {
+                                  "The ", "adjective", " NINJA said ", "adverb",
+                                  " to the ","adjective", " students to ", "verb",
+                                  " their homework."
+                                };
+
 
 
 char find_madlib(int num)
