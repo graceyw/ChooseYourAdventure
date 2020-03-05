@@ -16,14 +16,13 @@ char array1[9][LONGEST_WORD] = {
                                 };
 
 
-
 char find_madlib(int num)
 {
   /*
     Input: a number entered by the user.
     Output: a copy of the corresponding madlib with its placeholder words still intact.
   */
-  copyMad = copy(emptyMad); //copy doesn't actually work, must write it
+  char copyMad = copy(emptyMad); //copy doesn't actually work, must write it
   return copyMad;
 }
 
