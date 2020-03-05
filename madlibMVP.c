@@ -8,7 +8,6 @@
 #define LONGEST_WORD = 50
 
 char exampleMad[] = "The adjective NINJA said adverb to the adjective students to verb their homework.";
-
 char array1[9][LONGEST_WORD] = {
                                   "The ", "adjective", " NINJA said ", "adverb",
                                   " to the ","adjective", " students to ", "verb",
@@ -16,9 +15,7 @@ char array1[9][LONGEST_WORD] = {
                                 };
 
 
-
-char find_madlib(int num)
-{
+char find_madlib(num) {
   /*
     Input: a number entered by the user.
     Output: a copy of the corresponding madlib with its placeholder words still intact.
@@ -27,25 +24,16 @@ char find_madlib(int num)
   return copyMad;
 }
 
-int get_size(char a)
-{
-  /*
-    Input: an array.
-    Output: the size of the array (number of elements in it).
-  */
-  size_t n = sizeof(a) / sizeof(a[0]); //sizeof(a[0]) is just our buffer size
-  return n
-}
 
-char parse_madlib(char copyMad)
+char parse_madlib(copyMad)
 {
   /*
     Input: copyMad, a copy of the original madlib which contains words like "noun", "verb", "adjective", and "adverb"
     Output: an updated version of copyMad where all the "noun" etc. words have been replaced with user's input
   */
-  for (int i=0; i<get_size(copyMad); i++)
+  for (int i=0; i<size(copyMad); i++) //write another func for determining size of madlib
   {
-    if (copyMad[i] == "noun" || copyMad[i] == "verb") //add the rest of them
+    if (copyMad[i] == "noun" || copyMad[i] == "verb")
     {
       char *input = fgets("Please enter a %s \n", copyMad[i], 40, stdin);  //limits input string to arbitrary size. Should add an error in case it's bigger than that.
       copyMad[i] = input;
@@ -61,8 +49,8 @@ char parse_madlib(char copyMad)
 int main()
 {
   int num = fgets("Type in a number: one or two "); //but does fgets return a pointer? need to do some testing here
-  char emptyMad = find_madlib(num);
-  char completedMad = parse_madlib(emptyMad);
+  emptyMad = find_madlib(num);
+  completedMad = parse_madlib(emptyMad);
   printf("%s\n", completedMad);
   return 0;
 }
