@@ -5,13 +5,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+char exampleMad[] = "The adjective NINJA said adverb to the adjective students to verb their homework.";
+
 /*
   Input: a number entered by the user.
   Output: a copy of the corresponding madlib with its placeholder words still intact.
 */
 char find_madlib(num) {
   // TODO MJ
-  copyMad = copy(emptyMad) //copy doesn't actually work, must write it
+  copyMad = copy(emptyMad); //copy doesn't actually work, must write it
   return copyMad;
 }
 
