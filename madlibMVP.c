@@ -26,7 +26,7 @@ char find_madlib(int num)
   return copyMad;
 }
 
-int get_size(char a)
+int get_size(char a) 
 {
   /*
     Input: an array.
