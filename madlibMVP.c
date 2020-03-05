@@ -8,7 +8,8 @@
 char exampleMad[] = "The adjective NINJA said adverb to the adjective students to verb their homework.";
 
 
-char find_madlib(num) {
+char find_madlib(int num)
+{
   /*
     Input: a number entered by the user.
     Output: a copy of the corresponding madlib with its placeholder words still intact.
@@ -17,16 +18,25 @@ char find_madlib(num) {
   return copyMad;
 }
 
+int get_size(char a)
+{
+  /*
+    Input: an array.
+    Output: the size of the array (number of elements in it).
+  */
+  size_t n = sizeof(a) / sizeof(a[0]); //sizeof(a[0]) is just our buffer size
+  return n
+}
 
-char parse_madlib(copyMad)
+char parse_madlib(char copyMad)
 {
   /*
     Input: copyMad, a copy of the original madlib which contains words like "noun", "verb", "adjective", and "adverb"
     Output: an updated version of copyMad where all the "noun" etc. words have been replaced with user's input
   */
-  for (int i=0; i<size(copyMad); i++) //write another func for determining size of madlib
+  for (int i=0; i<get_size(copyMad); i++)
   {
-    if (copyMad[i] == "noun" || copyMad[i] == "verb")
+    if (copyMad[i] == "noun" || copyMad[i] == "verb") //add the rest of them
     {
       char *input = fgets("Please enter a %s \n", copyMad[i], 40, stdin);  //limits input string to arbitrary size. Should add an error in case it's bigger than that.
       copyMad[i] = input;
@@ -42,8 +52,8 @@ char parse_madlib(copyMad)
 int main()
 {
   int num = fgets("Type in a number: one or two "); //but does fgets return a pointer? need to do some testing here
-  emptyMad = find_madlib(num);
-  completedMad = parse_madlib(emptyMad);
+  char emptyMad = find_madlib(num);
+  char completedMad = parse_madlib(emptyMad);
   printf("%s\n", completedMad);
   return 0;
 }
