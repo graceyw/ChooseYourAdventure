@@ -15,13 +15,24 @@ char array1[9][LONGEST_WORD] = {
                                 };
 
 
-char find_madlib(num) {
+char find_madlib(int num)
+{
   /*
     Input: a number entered by the user.
     Output: a copy of the corresponding madlib with its placeholder words still intact.
   */
-  copyMad = copy(emptyMad); //copy doesn't actually work, must write it
+  char copyMad = copy(emptyMad); //copy doesn't actually work, must write it
   return copyMad;
+}
+
+int get_size(char a)
+{
+  /*
+    Input: an array.
+    Output: the size of the array (number of elements in it).
+  */
+  size_t n = sizeof(a) / sizeof(a[0]); //sizeof(a[0]) is just our buffer size
+  return n
 }
 
 
