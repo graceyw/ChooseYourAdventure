@@ -42,9 +42,9 @@ char parse_madlib(copyMad)
     Input: copyMad, a copy of the original madlib which contains words like "noun", "verb", "adjective", and "adverb"
     Output: an updated version of copyMad where all the "noun" etc. words have been replaced with user's input
   */
-  for (int i=0; i<size(copyMad); i++) //write another func for determining size of madlib
+  for (int i=0; i<get_size(copyMad); i++)
   {
-    if (copyMad[i] == "noun" || copyMad[i] == "verb")
+    if (copyMad[i] == "noun" || copyMad[i] == "verb" || copyMad[i] == "adverb" || copyMad[i] == "adjective")
     {
       char *input = fgets("Please enter a %s \n", copyMad[i], 40, stdin);  //limits input string to arbitrary size. Should add an error in case it's bigger than that.
       copyMad[i] = input;
