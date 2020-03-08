@@ -59,9 +59,15 @@ char parse_madlib(copyMad)
 */
 int main()
 {
+  int playing = 1;
+  while (playing == 1)
+  {
+
   int num = fgets("Type in a number: one or two "); //but does fgets return a pointer? need to do some testing here
+
   emptyMad = find_madlib(num);
   completedMad = parse_madlib(emptyMad);
   printf("%s\n", completedMad);
+  } 
   return 0;
 }
