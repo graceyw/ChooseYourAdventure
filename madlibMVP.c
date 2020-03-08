@@ -68,6 +68,6 @@ int main()
   emptyMad = find_madlib(num);
   completedMad = parse_madlib(emptyMad);
   printf("%s\n", completedMad);
-  } 
+  }
   return 0;
 }
