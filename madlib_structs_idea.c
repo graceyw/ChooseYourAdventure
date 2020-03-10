@@ -86,7 +86,6 @@ char parse_madlib(copyMad)
   }
   return copyMad;
 }
->>>>>>> 895fa5eba43caf6b1cb9da30e28455c2a327dd82
 
 /*
   Prompts user to input a number, which corresponds to one of the madlibs. main() calls find_madlib() and parse_madlib() to find which madlib corresponds to the user's choice of number, and then parse it and prompt the user to replace the placeholder words like "noun" with the silly words of their choice.
