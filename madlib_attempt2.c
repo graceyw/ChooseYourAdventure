@@ -23,13 +23,14 @@ char key3[4][9] = {"letter","adjective", "noun","adverb"};
 
 //Madlib Library of pointers.
 char *Mad_List[NUMBER_OF_MADLIBS-1];
+char *Mad_Keys[NUMBER_OF_MADLIBS-1];
 
-void print_madlib(int num, char *answers)
+void print_madlib(int num, char **answers)
 {
   int i;
   char m;
   printf("Your MadLib is ..... drumroll ... \n\n");
-  for(i = 0; i < sizeof(Mad_List[num-1]);i++)
+  for(i = 0; i < strlen(Mad_List[num-1]);i++)
   {
     m = Mad_List[num-1][i];
     if(atoi(&m)==0)
@@ -49,8 +50,19 @@ int main()
     Mad_List[0] = Mad1;
     Mad_List[1] = Mad2;
     Mad_List[2] = Mad3;
+    Mad_Keys[0] = *key1;
+    Mad_Keys[1] = *key2;
+    Mad_Keys[2] = *key3;
     //char *mad_keys[NUMBER_OF_MADLIBS-1] = {key1p,key2p,key3p};
     char m= Mad_List[0][1];
-    printf("%c\n",m);
+    char k = Mad_Keys[0][1];
+    printf("%c\n",k);
+    char answers[4][10]={"large","smoothly","red","sprint"};
+    char *rel_answers[4];
+    rel_answers[0]=answers[0];
+    rel_answers[1]=answers[1];
+    rel_answers[2]=answers[2];
+    rel_answers[3]=answers[3];
+    print_madlib(1,rel_answers);
     return 0;
   }
