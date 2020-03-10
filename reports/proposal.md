@@ -1,21 +1,35 @@
-# "Choose Your Own Adventure" Game
-## A Project to Learn C
+# Making Madlibs in C
 
 ### Team
 MJ McMillen and Gracey Wilson
 
 ## Project Goal
-Increase our understanding of basic C concepts like character arrays and pointers by creating our own “Choose Your Own Adventure” game. The game will use a lot of strings and decision making, allowing us to get lots of practice using basic concepts like pointers. Our lower bound goal is to make a game with at least 3 possible outcomes. Our upper bound goal is to incorporate ascii art into our adventure. We want to customize our journey to the player. We are also potentially interested in learning some C++, so might incorporate some object oriented programming if we have time.
+Our goal is to increase our understanding of basic C concepts like character arrays and pointers by creating an interactive Make-Your-Own Madlib game. We also hope to practice building a code infrastructure/deciding how to divide a program into functions in a way that makes sense.
 
-## Learning Goals
-Our learning goals for this project are very simple. We want to enforce good basic C coding habits and become more familiar with the idea of pointers. We also want to practice planning the architecture of a program/system of programs in C.
+Our lower bound goal is to allow a user to choose between 5 madlibs and interface with the program through the command line. One idea for a stretch goal is to allow a user to input their email address at the end of the game and email themselves their madlib. We also have several other small features that we would like to implement to make the code more readable/efficient.
 
-## What We Need To Get Started
-We need to first plot out our story and define its scope. There are many websites out there that describe how to create your own choose an adventure story. We will need to ideate then build our code on how long we want this to be.
+## How We Got Started
 
-We may want access to a better string library because most of the project will revolve around string manipulation. We may want some help finding a good library and learning how to set up our code so it is not just a bunch of if statements. We have already started researching this (one of the [resources](https://www.reddit.com/r/learnprogramming/comments/3y8xw7/help_good_practice_for_writing_a_choose_your_own/) we've found so far) but we would appreciate any input you can share!
+Our original idea was to make a “Choose Your Own Adventure” game, so we began by individually researching simple versions of this game in C. We pivoted from this idea because we realized we would end up spending more time on story development than on practicing our programming, and we had the opposite priorities for this project.
 
-## Our First Steps
-We will begin by individually completing a simple C “Choose Your Own Adventure” tutorial online. We will each discover and go through our own tutorials so that we hopefully learn an overlap of skills, but not exactly the same ones. We will also individually ideate about the storyline we want to have.
+Once we decided on doing the madlibs, we scaffolded out the general code architecture with the necessary functions and added comments with their inputs and outputs, calling them in main(). Then we assigned each function to one of us as individuals, and set due dates for writing them in our Trello.
 
-Next, we will meet and plan our story out on sticky notes. Once we have the shape of our game, we will then define the exact scope of the project, create diagrams, and begin coding. We need to do some ground work on the story before understanding which specific software tasks we have. This will mostly be very collaborative between us and we will share the work at all stages. This will allow us to work through the entire coding process to better understand all aspects of our project as individuals, even as we work to achieve more as a team than we could on our own.
+## What We're Doing Now
+
+After brainstorming and roughly coding several different options for storing, printing, and editing our madlibs, we settled on our final code structure this past Sunday. Now we are writing those final functions.
+
+We currently have three sample madlibs written, the print function written, and part of the command line interface written. Our program stores each madlib in its own character array. The character arrays have numbers where the users need to input a new word. The madlibs also have a corresponding key array. The key array has the part of speech that is needed to replace each of the numbers.
+
+When the user starts the program they are prompted to pick a number between 1 and the number of madlibs we have written. The program will then request each of the parts of the speech found in the corresponding keywords array. The user types in their answers and the program stores them in a new array called answers. The answers array is passed to the print_madlib function.
+
+The Print Madlib function takes in the answers and the number of madlib being done. It then cycles through the madlib character by character. It prints any character that is not a number and if it finds a number, it prints the corresponding word inputted by the user.
+
+We’re going to make a stack diagram/code architecture diagram to better explain this.
+
+## Next Steps
+Our next steps mainly revolve around the user interface and madlib stories. We need to finish writing the user interface and hope to add the functionality so that a user can go through multiple madlibs without restarting the program. And we need to write more madlibs!
+
+## Project Links
+Repo: https://github.com/graceyw/SoftSysWAFFLES
+
+Trello: https://trello.com/b/ssmb6u1g/waffles
