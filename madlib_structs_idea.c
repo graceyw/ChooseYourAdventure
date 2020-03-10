@@ -10,7 +10,6 @@
 #define LONGEST_WORD  15
 #define NUMBER_OF_MADLIBS  3
 
-
 // first Madlib
 char *Mad1 = "The 1 NINJA said 2 to the 3 students to 4 their homework.";
 char key1[4][9] = {"adjective","adverb","adjective","verb"};
@@ -94,15 +93,14 @@ char parse_madlib(copyMad)
 */
 int main()
 {
-  int playing = 1;
-  while (playing == 1)
-  {
-
-  int num = fgets("Type in a number: one or two "); //but does fgets return a pointer? need to do some testing here
-
-  emptyMad = find_madlib(num);
-  completedMad = parse_madlib(emptyMad);
-  printf("%s\n", completedMad);
+  char *keys[4][9] = {"adjective", "adverb", "adjective", "noun"};
+  char input[15];
+  for (int i=0; i<size(keys); i++) {
+    printf("Please type in a %s: ", keys[i]);
+    fgets(input, 15, stdin);
   }
+  // for (int i=0; i<15; i++) {
+  //   printf("%s\n", input[i]);
+  // }
   return 0;
 }
