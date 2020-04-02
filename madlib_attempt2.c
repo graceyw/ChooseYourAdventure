@@ -29,20 +29,20 @@ void print_madlib(int num, char **answers)
 {
   int i;
   char m;
-  printf("Your MadLib is ..... drumroll ... \n\n");
-  for(i = 0; i < strlen(Mad_List[num-1]);i++)
+  printf("Your MadLib is... drumroll... \n\n");
+  for(i = 0; i < strlen(Mad_List[num-1]);i++) // For the length of our madlib string...
   {
-    m = Mad_List[num-1][i];
-    if(atoi(&m)==0)
+    m = Mad_List[num-1][i];    // Grab the current character being processed
+    if(atoi(&m)==0)       // If that character is not an integer...
     {
-      printf("%c",m);
+      printf("%c",m);    // Print the character
     }
     else
     {
-      printf("%s",answers[(atoi(&m)-1)]);
+      printf("%s",answers[(atoi(&m)-1)]);    // Else, print the mth user-inputted word
     }
   }
-  printf("\n \n Thanks for Playing! We Hope you enjoyed your Madlib!");
+  printf("\n \n Thanks for playing! We hope you enjoyed your Madlib!");
 }
 
 int main()
