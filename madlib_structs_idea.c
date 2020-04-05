@@ -95,15 +95,15 @@ int main()
 {
   char *keys[4][9] = {"adjective", "adverb", "adjective", "noun"};
   char input[15];
-  char *userWords[4][15]; //where we're gonna store the words they type in
+  char userWords[4][15]; //where we're gonna store the words they type in
   int index;
   for (int i=0; i<4; i++) {
     printf("Please type in a %s: ", keys[i]);
     fgets(input, 15, stdin);
     userWords[index] = input;
     index++;
-    for (int i=0; i<15; i++) {
-      printf("%s\n", userWords[i]);
+    for (int j=0; j<15; j++) {
+      printf("%s\n", userWords[j]);
     }
   }
   return 0;

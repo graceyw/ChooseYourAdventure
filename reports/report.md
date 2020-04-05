@@ -5,12 +5,12 @@
 MJ McMillen and Gracey Wilson
 
 ## Project Goal
-Our goal is to increase our understanding of basic C concepts like character arrays and pointers by creating an interactive Make-Your-Own Madlib game. We also hope to practice building a code infrastructure/deciding how to divide a program into functions in a way that makes sense.
+Our goal was to increase our understanding of basic C concepts like character arrays and pointers by creating an interactive Make-Your-Own Madlib game. We also hoped to practice building a code infrastructure/deciding how to divide a program into functions in an efficient and readable way.
 
-Our lower bound goal is to allow a user to choose between 5 Madlibs and interface with the program through the command line. One idea for a stretch goal is to allow a user to input their email address at the end of the game and email themselves their madlib. We also have several other small features that we would like to implement to make the code more readable/efficient.
+Our lower bound goal was to allow a user to choose between 3 Madlibs and interface with the program through the command line. One idea for a stretch goal was to allow a user to input their email address at the end of the game and email themselves their madlib. We also had several other small features that we were interested in implementing to make the code more readable and efficient.
 
 ## Learning Goals
-Our learning goals for this project are very simple. We want to enforce good basic C coding habits and become more used to the idea of pointers. We want to make sure we lay a good c foundation for the future. When we were doing the homeworks, we often found ourselves using tricks like adding and deleting a bunch of * s until the code compiled. This showed we did not understand the basics of what was going on and we needed more practice with basic C principles.
+Our learning goals for this project were very simple. We wanted to enforce good basic C coding habits and become more comfortable with the concept of pointers. We wanted to make sure we laid a good c foundation for the future. Before this project, when we were doing homework assignments, we often found ourselves using tricks like adding and deleting a bunch of * s until the code compiled. This showed we did not understand the basics of what was going on and we needed more practice with basic C principles.
 
 ## What We Did
 
@@ -57,6 +57,8 @@ A few weeks later, this practice being flexible and adapting to unforeseen chang
 
 This project effectively helped us achieve our learning goals. Through this project we became more comfortable writing C code. Before we started this project, we felt like when we wrote code in C, we were really writing poorly translated Python scripts. Now it feels like we have a grasp on the basic foundations of the language and are able to write code that truly takes better advantage of the opportunities and constraints of the language. It was a real “aha moment” when we started thinking in C.
 
+
+## Project Links
 
 Repo: https://github.com/graceyw/SoftSysWAFFLES
 
