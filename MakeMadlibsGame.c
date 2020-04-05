@@ -71,12 +71,12 @@ int main()
 
     // We collect and store user input for selected madlib
     for (int i=0; i<4; i++) {
-      printf("Please enter a(n) %s: ", key2[i]); // Prompt user input - needs to change to Mad_Keys[madNum][i] or something like that
-      fgets(input, 15, stdin);  // Collect user input via stdin and store in "input" array
-      printf("%s", input);    //print statement for testing purposes
-      for (int j=0; j<15; j++) {  // For each character in the input word...
-        answers[index][j] = input[j];  // Add the inputted char to the answers array
-        // printf("%c", answers[index][j]);  //print statement for testing purposes
+      printf("Please enter a(n) %s: ", key2[i]); // Prompt user input - needs to change to Mad_Keys[madNum][i] or something like that. and we need to decide on either 0 or 1 indexing.
+      fgets(input, 15, stdin);                   // Collect user input via stdin and store in "input" array
+      printf("%s", input);                    // print statement for testing purposes
+      for (int j=0; j<15; j++) {                 // For each character in the input word...
+        answers[index][j] = input[j];            // Add the inputted char to the answers array
+        // printf("%c", answers[index][j]);   // print statement for testing purposes
       }
       index++;
     }
@@ -87,6 +87,6 @@ int main()
     rel_answers[1] = answers[1];
     rel_answers[2] = answers[2];
     rel_answers[3] = answers[3];
-    // print_madlib(1,rel_answers);
+    // print_madlib(1,rel_answers); // por que no solamente answers??
     return 0;
   }

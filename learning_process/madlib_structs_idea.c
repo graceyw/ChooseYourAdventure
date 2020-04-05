@@ -17,13 +17,13 @@ char key1[4][9] = {"adjective","adverb","adjective","verb"};
 //char *key1p = key1;
 
 // second Madlib
-char Mad2[110] = "Allen Downey, Proffessor of 1 at Olin College of 2 is teaching a 3 class called 4 Systems this Fall.";
+char Mad2[110] = "Allen Downey, Professor of 1 at Olin College of 2 is teaching a 3 class called 4 Systems this Fall.";
 char key2[4][9] = {"noun","noun","adjective","noun"};
 char *Mad2p = Mad2;
 //char *key2p = key2;
 
 // third Madlib
-char Mad3[110] = "Head First 1 is a very 2 book about 3 oriented programming.The 2 book is as 4 as is it informitive.";
+char Mad3[110] = "Head First 1 is a very 2 book about 3 oriented programming.The 2 book is as 4 as is it informative.";
 char key3[4][9] = {"letter","adjective", "noun","adverb"};
 char *Mad3p = Mad3;
 //char *key3p = key3;
