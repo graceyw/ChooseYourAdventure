@@ -7,7 +7,7 @@ MJ McMillen and Gracey Wilson
 ## Project Goal
 Our goal was to increase our understanding of basic C concepts like character arrays and pointers by creating an interactive Make-Your-Own Madlib game. We also hoped to practice building a code infrastructure/deciding how to divide a program into functions in an efficient and readable way.
 
-Our lower bound goal was to allow a user to choose between 3 Madlibs and interface with the program through the command line. One idea for a stretch goal was to allow a user to input their email address at the end of the game and email themselves their madlib. We also had several other small features that we were interested in implementing to make the code more readable and efficient.
+Our lower bound goal was to allow a user to choose between at least 3 madlibs and interface with the program through the command line. One idea for a stretch goal was to allow a user to input their email address at the end of the game and email themselves their madlib. We also had several other small features that we were interested in implementing to make the code more readable and efficient.
 
 ## Learning Goals
 Our learning goals for this project were very simple. We wanted to enforce good basic C coding habits and become more comfortable with the concept of pointers. We wanted to make sure we laid a good c foundation for the future. Before this project, when we were doing homework assignments, we often found ourselves using tricks like adding and deleting a bunch of * s until the code compiled. This showed we did not understand the basics of what was going on and we needed more practice with basic C principles.
@@ -24,23 +24,31 @@ When the user starts the program they are prompted to pick a number between 1 an
 
 ```c
 void print_madlib(int num, char **answers)
+/*
+Takes in an int that describes the user-inputted number corresponding to the madlib they want to play, and a pointer to a 3D character array containing the words inputted by the user.
+Prints the completed madlib with the user input inserted in the correct places of the madlib sentence.
+*/
 {
   int i;
   char m;
-  printf("Your MadLib is ..... drumroll ... \n\n");
-  for(i = 0; i < strlen(Mad_List[num-1]);i++) //For the length of our madlib string...
+  printf("\nYour MadLib is... drumroll, please... \n\n");
+  for (i=0; i<strlen(Mad_List[num-1]); i++)  // For the length of our madlib string...
   {
-    m = Mad_List[num-1][i];    //Grab the current character being processed
-    if(atoi(&m)==0)       //If that character is not an integer...
+    m = Mad_List[num-1][i];                    // Grab the current character being processed
+    if (atoi(&m) == 0)                         // If that character is not an integer...
     {
-          printf("%c",m);    //Print the character
+      printf("%c",m);                             // Then print the character
     }
-    else
+    else if (m!= ' ')                          // If the current character is not a space (or an integer)
     {
-          printf("%s",answers[(atoi(&m)-1)]);    //Else, print the mth user-inputted word
+      printf("%s", answers[(atoi(&m)-1)]);        // Then print the mth user-inputted word
+    }
+    else if (m==' ')                           // If the current character is a space
+    {
+      printf("%c",m);                             // Then print that space
     }
   }
-  printf("\n \n Thanks for playing! We hope you enjoyed your Madlib!");
+  printf("\n\nThanks for playing! We hope you enjoyed your Madlib!\n");
 }
 ```
 
@@ -48,6 +56,9 @@ The print_madlib function takes as arguments the user’s input (“answers”) 
 
 This system is much more efficient and logical than our first attempt. It’s important to acknowledge its limitations too, though, including the fact that no integers can be used as part of the story in the madlibs.
 
+Here is a demo of a user interacting with the program and making their own madlib!
+
+![demo](/demo.gif)
 
 ## Reflection
 
