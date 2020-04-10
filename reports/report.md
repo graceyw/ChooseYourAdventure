@@ -58,7 +58,7 @@ This system is much more efficient and logical than our first attempt. It’s im
 
 Here is a demo of a user interacting with the program and making their own madlib!
 
-![Terminal demo gif](/demo.gif)
+![Demo gif](demo.gif)
 
 ## Reflection
 
