@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define LONGEST_PHRASE  50
-#define LONGEST_WORD  15
+
 #define NUMBER_OF_MADLIBS  3
 
 // first Madlib
@@ -11,8 +10,8 @@ char Mad1[60] = "The 1 NINJA said 2 to the 3 student to go 4 their homework.";
 // char key1[4][15] = {"adjective", "adverb", "adjective", "verb"};
 
 // second Madlib
-char Mad2[500] = "Allen Downey, Professor of 1 at Olin College of 2 is teaching a 3 class called 4 Systems this Fall.";
-// char key2[4][15] = {"noun", "noun", "adjective", "noun"};
+char Mad2[150] = "Allen Downey Professor of 1 at Olin College of 2 teaches a 3 class called 4 Systems this Fall.";
+char key2[4][15] = {"plural noun","noun","adjective","noun"};
 
 // third Madlib
 char Mad3[110] = "Head First 1 is a very 2 book about 3 oriented programming. The 2 book is as 4 as is it informative.";
@@ -21,7 +20,7 @@ char Mad3[110] = "Head First 1 is a very 2 book about 3 oriented programming. Th
 
 //Madlib Library of pointers.
 char *Mad_List[NUMBER_OF_MADLIBS];
-char master_key[3][4][15] = {{"adjective", "adverb", "adjective", "verb"},{"noun", "adverb", "adjective", "noun"},{"letter", "adjective", "noun", "adjective"}};
+char master_key[3][4][15] = {{"adjective", "adverb", "adjective", "verb"},{"plural noun","ing verb","adjective","noun"},{"letter","adjective", "noun","adjective"}};
 //char *Mad_Keys[NUMBER_OF_MADLIBS];
 
 void print_madlib(int num, char **answers)
@@ -29,16 +28,20 @@ void print_madlib(int num, char **answers)
   int i;
   char m;
   printf("Your MadLib is... drumroll, please... \n\n");
-  for(i = 0; i < strlen(Mad_List[num-1])+1;i++) // For the length of our madlib string...
+  for(i = 0; i < strlen(Mad_List[num-1]);i++) // For the length of our madlib string...
   {
     m = Mad_List[num-1][i];    // Grab the current character being processed
     if(atoi(&m)==0)       // If that character is not an integer...
     {
       printf("%c",m);    // Print the character
     }
-    else
+    else if(m!= ' ')
     {
       printf("%s", answers[(atoi(&m)-1)]);    // Else, print the mth user-inputted word
+    }
+    else if(m==' ')
+    {
+      printf("%c",m);
     }
   }
   printf("\n\nThanks for playing! We hope you enjoyed your Madlib!\n");
@@ -67,7 +70,7 @@ int main()
 
     // We collect and store user input for selected madlib
     intmadNum = madNum-'0';
-    printf("%d\n", intmadNum);
+  //  printf("%d\n", intmadNum);
     for (int i=0; i<4; i++) {
       printf("Please enter a(n) "); //prompt user input
       for(int r = 0; r<15; r++){   //this for loop prints out the letters stored in our 3d array.
